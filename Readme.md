@@ -1,12 +1,16 @@
 INSTALL
 -------
+```
 go get -u github.com/msonawane/grpc-example/greeter_client
 go get -u github.com/msonawane/grpc-example/greeter_server
-
+```
 TRY IT!
 -------
+```
 greeter_server &
 greeter_client Manoj
+
+```
 
 OPTIONAL - Rebuilding the generated code
 ----------------------------------------
@@ -21,4 +25,5 @@ OPTIONAL - Rebuilding the generated code
 $ go get -a github.com/golang/protobuf/protoc-gen-go
 $
 $ # from this dir; invoke protoc
-run protoc -I ./protos/ ./protos/helloworld.proto --go_out=plugins=grpc:protos
+protoc -I ./protos/ ./protos/helloworld.proto --go_out=plugins=grpc:protos
+```
